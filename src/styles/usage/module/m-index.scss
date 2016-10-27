@@ -1,0 +1,57 @@
+#xhsapp{
+  width: 100%;
+  height: 100%;
+
+}
+.box-container {
+  width: 100%;
+  height: 100%;
+  @include flexbox();
+  @include flex-direction(column);
+    @extend %main-container;
+    @extend %search-container;
+    @extend %cart-container;
+    @extend %info-container;
+    @extend %my-container;
+    footer {
+        width: 100%;
+        height: 0.44rem;
+        background: #fff;
+        color: #999;
+        font-size: 10px;
+        @include border(1px 0 0 0, #999);
+        ul {
+            height: 100%;
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(center);
+            li{
+              @include flex();
+              a{
+                color: #666;
+                @include flexbox();
+                @include align-items(center);
+                @include justify-content(center);
+                @include flex-direction(column);
+              }
+            }
+            .active a{
+              color: red;
+            }
+        }
+    }
+}
+
+/* 必需 */
+.goto-transition {
+  transition: all .3s ease;
+}
+
+/* .expand-enter 定义进入的开始状态 */
+/* .expand-leave 定义离开的结束状态 */
+.goto-enter {
+  @include transform(translate(0,0));
+}
+ .goto-leave{
+    @include transform(translate(-100%,0));
+ }

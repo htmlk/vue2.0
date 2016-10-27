@@ -1,0 +1,61 @@
+.detail {
+    .detail-header {
+        height: 0.44rem;
+        ul {
+            @include flexbox();
+            height: 0.44rem;
+            @include border(1px, #ccc);
+            li {
+                @include flex();
+                @include flexbox();
+                @include justify-content(center);
+                @include align-items(center);
+            }
+            li:nth-child(2) {
+                @include flex(3);
+            }
+        }
+    }
+    .detail-content {
+      padding: 0.1rem;
+      .title{
+        @include flexbox();
+        .title-txt{
+          @include flex();
+          span{
+            font-size: 12px;
+            color: #ccc;
+          }
+        }
+        .like{
+          padding: 0.05rem;
+          p{
+            @include flexbox();
+            @include justify-content(center);
+            @include align-items(center);
+            width: 0.8rem;
+            height: 0.25rem;
+            border-radius: 0.05rem;
+            background: red;
+            color: #fff;
+          }
+        }
+      }
+      .desc{
+        @include flexbox();
+        img{
+          width: 0.2rem;
+          height: 0.2rem;
+          border-radius: 0.1rem;
+        }
+        p{
+          font-size: 12px;
+          margin-left: 0.1rem;
+          span{
+            font-weight: bold;
+          }
+        }
+      }
+
+    }
+}

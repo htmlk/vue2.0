@@ -1,0 +1,45 @@
+%info-container {
+    .info-container {
+        @include flex();
+        @include flexbox();
+        @include flex-direction(column);
+        width: 100%;
+        .search-header {
+            height: 0.44rem;
+            width: 100%;
+            background: red;
+            @include flexbox();
+            @include justify-content(center);
+            @include align-items(center);
+            color: #fff;
+            font-size: 0.16rem;
+        }
+        .info-content {
+            .infoTab {
+                ul {
+                    height: 0.34rem;
+                    @include flexbox();
+                    @include border(0 0 1px 0,#ccc);
+                    li {
+                        @include flex();
+                        @include flexbox();
+                        @include justify-content(center);
+                        @include align-items(center);
+                    }
+                    .active {
+                        color: red;
+                        @include border(0 0 0.5px 0,#f00);
+                    }
+                }
+            }
+            .info-main {
+                width: 100%;
+                .new {
+                    background: #fff;
+                    width: 100%;
+                    height: 4rem;
+                }
+            }
+        }
+    }
+}

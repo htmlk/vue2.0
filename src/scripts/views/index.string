@@ -1,0 +1,8 @@
+<div id="app">
+  <ul>
+    <template v-for="item in list">
+      <li></li>
+      <li>{{item.title}}</li>
+    </template>
+  </ul>
+</div>

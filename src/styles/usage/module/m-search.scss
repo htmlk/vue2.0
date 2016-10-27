@@ -1,0 +1,157 @@
+%search-container {
+    .search-container {
+        @include flex();
+        @include flexbox();
+        @include flex-direction(column);
+        width: 100%;
+        .search-header {
+            height: 0.44rem;
+            width: 100%;
+            background: red;
+            ul {
+                height: 100%;
+                @include flexbox();
+                color: #ffffff;
+                li {
+                    @include flex();
+                    @include flexbox();
+                    @include align-items(center);
+                    @include justify-content(center);
+                }
+                li:nth-child(1) {
+                    @include flex(8);
+                    @include flexbox();
+                    margin: 5px 15px;
+                    background: darkred;
+                    border-radius: 5px;
+                    i {
+                        width: 8vw;
+                        margin-left: 2vw;
+                    }
+                    input {
+                        width: 90vw;
+                        background: darkred;
+                        border: 0;
+                        color: #ffffff;
+                    }
+                }
+                li:nth-child(2) {
+                    i {
+                        font-size: 26px;
+                    }
+                }
+            }
+        }
+        .search-content {
+            @include flex();
+            overflow: hidden;
+            width: 100%;
+            .swiper-container {
+                img {
+                    width: 100vw;
+                }
+                .swiper-pagination {
+                    color: #fff;
+                    margin-left: 40vw;
+                }
+            }
+            .hot-container{
+                background: #fff;
+              .title{
+                ul{
+                  height: 0.4rem;
+                  @include flexbox();
+                  @include align-items(center);
+                  @include justify-content(center);
+                  li{
+                    @include flex();
+                    text-align: center;
+                    font-size: 16px;
+                  }
+                  li:nth-child(1){
+                    @include flex();
+                    text-align: right;
+                  }
+                  li:nth-child(2){
+                    @include flex(2);
+                    text-align: left;
+                    font-size: 12px;
+                    color: #ccc;
+                  }
+                }
+              }
+
+              .content{
+                ul{
+                  width: 9rem;
+                  @include flexbox();
+                    li{
+                      width: 1rem;
+                      text-align: center;
+                      font-size: 12px;
+                      margin-left: 0.1rem;
+                      img{
+                        width: 1rem;
+                      }
+                    }
+                    li:last-child{
+                      @include border(1px #ccc);
+                      @include flexbox();
+                      @include align-items(center);
+                      @include justify-content(center);
+                      @include flex-direction(column);
+                    }
+                }
+              }
+
+              .last-content{
+                  width: 100%;
+                  @include flexbox();
+                  @include justify-content(center);
+                ul{
+                  @include flexbox();
+                  @include flex-direction(column);
+                  li{
+                    @include border(1px ,#ccc,solid,0.05rem );
+                    padding: 0.1rem;
+                    margin-bottom: 0.1rem;
+                    .last-title{
+                      p{
+                      font-size: 14px;
+                      color: #333;
+                      }
+                      span{
+                        font-size: 12px;
+                        color: #ccc;
+                      }
+                    }
+                    .last-images{
+                      @include flexbox();
+                      img{
+                        width: 0.6rem;
+                        height: 0.6rem;
+                        margin: 0 0.04rem;
+                      }
+                    }
+                    .last-user{
+                      @include flexbox();
+                      @include align-items(center);
+                      font-size: 12px;
+                      height: 0.3rem;
+                      color: #aaa;
+                      // @include border(1px 0 0 0, #ccc);
+                      img{
+                        height: 0.14rem;
+                        border-radius: 0.07rem;
+                      }
+                    }
+
+                  }
+                }
+
+
+              }
+            }
+        }
+    }
+}

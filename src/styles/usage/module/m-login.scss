@@ -1,0 +1,55 @@
+.bg-container{
+
+  background: url(/images/xy_walkthroughs_bg1.png) no-repeat;
+  background-size: 100% 100%;
+  @include flexbox();
+  @include flex-direction(column);
+  width: 100%;
+  height: 100%;
+  .swiper-container{
+    @include flex();
+    width: 100%;
+    .swiper-slide{
+      @include flexbox();
+      @include justify-content(center);
+      @include align-items(center);
+      @include flex-direction(column);
+      p{
+        font-weight: bold;
+      }
+      img{
+        width: 70%;
+      }
+    }
+  }
+  .bg-box{
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    @include flex-direction(column);
+    width: 100%;
+    a{
+      display: block;
+      width: 1.2rem;
+      padding: 0.05rem;
+      margin-bottom: 0.05rem;
+      @include flexbox();
+      @include justify-content(center);
+      @include align-items(center);
+      border-radius: 0.04rem;
+    }
+    .regbox{
+      a{
+        background: red;
+        color: #fff;
+      }
+    }
+    .loginbox{
+      a{
+        background: #fff;
+        color: #000;
+        @include border(1px ,#aaa,solid,0.04rem);
+      }
+    }
+  }
+}

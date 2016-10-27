@@ -1,0 +1,8 @@
+%my-container {
+    .my-container {
+        @include flex();
+        width: 100%;
+        overflow: hidden;
+        
+    }
+}

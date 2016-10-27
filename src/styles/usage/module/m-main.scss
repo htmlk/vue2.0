@@ -1,0 +1,88 @@
+
+%main-container{
+  .main-container{
+    @include flex();
+    @include flexbox();
+    @include flex-direction(column);
+    width: 100%;
+      .main-header{
+        height: 0.44rem;
+        width: 100%;
+        background: red;
+        color: #fff;
+        ul{
+          	height: 100%;
+            @include flexbox();
+            li{
+              @include flex();
+              @include flexbox();
+              @include align-items(center);
+              @include justify-content(center);
+              i{
+                font-size: 20px;
+              }
+            }
+            li:nth-child(2){
+              @include flex(5);
+            }
+        }
+
+      }
+      .main-content{
+        overflow: hidden;
+        //@include flexbox();
+        width: 100%;
+        .loading{
+          height: 100px;
+          @include flexbox();
+          @include align-items(center);
+          @include justify-content(center);
+        }
+        #app{
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          .item {
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                right: 5px;
+                bottom: 5px;
+                overflow: hidden;
+                color: rgb(0,158,107);
+                border: 1px solid #ccc;
+                img{
+                  width: 100%;
+                }
+                .txt{
+                  h2{
+                    color: #000;
+                  }
+                }
+
+
+            }
+            .item:after {
+                content: attr(index);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+            }
+                .wf-transition {
+                transition: opacity .3s ease;
+                -webkit-transition: opacity .3s ease;
+                }
+                .wf-enter {
+                opacity: 0;
+                }
+                .item-move {
+        transition: all .5s cubic-bezier(.55,0,.1,1);
+        -webkit-transition: all .5s cubic-bezier(.55,0,.1,1);
+      }
+    }
+       }
+  }
+}
